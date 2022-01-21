@@ -1,0 +1,38 @@
+﻿.content {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dvd {
+    width: 20em;
+    position: relative;
+}
+
+.cls-0 {
+    fill: #0026ff;
+}
+
+.cls-1 {
+    fill: #ff8300;
+}
+
+.cls-2 {
+    fill: #00feff;
+}
+
+.cls-3 {
+    fill: #be00ff;
+}
+
+.cls-4 {
+    fill: #ff008b;
+}
+
+.cls-5 {
+    fill: #ff2600;
+}
+
+.cls-6 {
+    fill: #fffa01;
+}
