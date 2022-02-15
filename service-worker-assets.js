@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-p9hk97K6\/jInnVqbOGxAzwguovce1L3Fq\/F27HZHXN8=",
+      "hash": "sha256-wxtGByLxZmoGoj4\/gaOMXef0MKhfWSY88eT1SeRU+9U=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-WiIoeD+7xIVQo\/aexxYSzLdlmFa8AEqalT0\/I58Frhs=",
+      "hash": "sha256-jtSM5EBfFwUmcj6W\/mv13ZVGe3a5BgjUTAlf3hdUnmk=",
       "url": "_framework\/DVD.dll"
     },
     {
@@ -233,5 +233,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "TRHyxj8X"
+  "version": "jKD8kOEp"
 };
