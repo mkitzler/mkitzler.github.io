@@ -7,11 +7,10 @@
 
 window.getDVDDimensions = function () {
     let dvd = document.getElementById("dvd");
-    console.log(dvd);
     if (dvd) {
         return {
-            width: dvd.width,
-            height: dvd.height
+            width: dvd.clientWidth,
+            height: dvd.clientHeight
         };
     }
     else {
