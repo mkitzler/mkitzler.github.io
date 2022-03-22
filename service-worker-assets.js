@@ -153,7 +153,7 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-58lO7bueC3GAKWg7d2+Q5GiNb55WMmc9QcRqY7L8QYg=",
+      "hash": "sha256-Jhxt5QTrovYaYz1hec7gQwPJS0WxssEN\/5AapddwJ9A=",
       "url": "DVD.styles.css"
     },
     {
@@ -233,5 +233,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "5KPLoh08"
+  "version": "6971j+6H"
 };
