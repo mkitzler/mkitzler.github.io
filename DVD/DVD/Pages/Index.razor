@@ -94,10 +94,7 @@
 	{
 		if (firstRender)
 		{
-			window = await getDimensions();
 			dvd = await JS.InvokeAsync<Dimensions>("getDVDDimensions");
-			Console.WriteLine(window);
-			Console.WriteLine(dvd);
 			Start();
 			Console.WriteLine("Started");
 		}
@@ -110,8 +107,9 @@
 			await Task.Delay(16);
 			window = await getDimensions();
 
-			x += Math.Cos(angle) * 10;
-			y += -(Math.Sin(angle) * 10);
+			const int speed = 5;
+			x += Math.Cos(angle) * speed;
+			y += -(Math.Sin(angle) * speed);
 
 			if (x < 0 || x + dvd.Width > window.Width)
 			{
