@@ -3,30 +3,58 @@
     position: relative;
 }
 
-.cls-0 {
+.bg-0 {
+    background-color: #0026ff !important;
+}
+
+.bg-1 {
+    background-color: #ff8300 !important;
+}
+
+.bg-2 {
+    background-color: #00feff !important;
+}
+
+.bg-3 {
+    background-color: #be00ff !important;
+}
+
+.bg-4 {
+    background-color: #ff008b !important;
+}
+
+.bg-5 {
+    background-color: #ff2600 !important;
+}
+
+.bg-6 {
+    background-color: #fffa01 !important;
+}
+
+.fill-0 {
     fill: #0026ff;
 }
 
-.cls-1 {
+.fill-1 {
     fill: #ff8300;
 }
 
-.cls-2 {
+.fill-2 {
     fill: #00feff;
 }
 
-.cls-3 {
+.fill-3 {
     fill: #be00ff;
 }
 
-.cls-4 {
+.fill-4 {
     fill: #ff008b;
 }
 
-.cls-5 {
+.fill-5 {
     fill: #ff2600;
 }
 
-.cls-6 {
+.fill-6 {
     fill: #fffa01;
 }
