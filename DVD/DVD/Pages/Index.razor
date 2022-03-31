@@ -79,9 +79,9 @@
 		}
 	}
 
-	private async Task<Dimensions> getDimensions()
+	private async Task<Tuple<Dimensions, Dimensions>> getDimensions()
 	{
-		return await JS.InvokeAsync<Dimensions>("getDimensions");
+		return await JS.InvokeAsync<Tuple<Dimensions, Dimensions>>("getDimensions");
 	}
 
 	protected override void OnInitialized()
@@ -94,7 +94,6 @@
 	{
 		if (firstRender)
 		{
-			dvd = await JS.InvokeAsync<Dimensions>("getDVDDimensions");
 			Start();
 			Console.WriteLine("Started");
 		}
@@ -102,29 +101,40 @@
 
 	private async Task Start()
 	{
+		DateTime lastCall = DateTime.Now;
+		TimeSpan deltaTime;
 		while (true)
 		{
-			await Task.Delay(16);
-			window = await getDimensions();
-
-			const int speed = 5;
-			x += Math.Cos(angle) * speed;
-			y += -(Math.Sin(angle) * speed);
-
-			if (x < 0 || x + dvd.Width > window.Width)
-			{
-				x = (x < 0) ? 0 : window.Width - dvd.Width;
-				Angle = 180 - Angle + new Random().Next(-10, 11);
-				Color++;
-			}
-			else if (y < 0 || y + dvd.Height > window.Height)
-			{
-				y = (y < 0) ? 0 : window.Height - dvd.Height;
-				Angle = 360 - Angle + new Random().Next(-10, 11);
-				Color++;
-			}
-
-			StateHasChanged();
+			deltaTime = DateTime.Now - lastCall;
+			lastCall = DateTime.Now;
+			await Loop(deltaTime);
 		}
+	}
+
+	private async Task Loop(TimeSpan deltaTime)
+	{
+		Console.WriteLine(deltaTime.Milliseconds);
+
+		await Task.Delay(1);
+		(window, dvd) = await getDimensions();
+
+		double speed = 0.2 * deltaTime.Milliseconds;
+		x += Math.Cos(angle) * speed;
+		y += -(Math.Sin(angle) * speed);
+
+		if (x < 0 || x + dvd.Width > window.Width)
+		{
+			x = (x < 0) ? 0 : window.Width - dvd.Width;
+			Angle = 180 - Angle + new Random().Next(-10, 11);
+			Color++;
+		}
+		else if (y < 0 || y + dvd.Height > window.Height)
+		{
+			y = (y < 0) ? 0 : window.Height - dvd.Height;
+			Angle = 360 - Angle + new Random().Next(-10, 11);
+			Color++;
+		}
+
+		StateHasChanged();
 	}
 }

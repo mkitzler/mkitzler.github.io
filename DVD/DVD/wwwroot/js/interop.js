@@ -1,19 +1,13 @@
 ﻿window.getDimensions = function () {
-    return {
-        width: window.innerWidth,
-        height: window.innerHeight
-    };
-};
-
-window.getDVDDimensions = function () {
     let dvd = document.getElementById("dvd");
-    if (dvd) {
-        return {
+    return {
+        Item1: {
+            width: window.innerWidth,
+            height: window.innerHeight
+        },
+        Item2: dvd ? {
             width: dvd.clientWidth,
             height: dvd.clientHeight
-        };
-    }
-    else {
-        return null;
-    }
+        } : null
+    };
 };
