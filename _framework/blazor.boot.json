@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "DVD.dll": "sha256-rqbI969pMHexc2NLpXGHuyGmCkfp9+PkzzHoacwpSVs=",
+      "DVD.dll": "sha256-taJMh43p3gq5L1+jRZZLijV67euXN3kbhIkeuBrm1Es=",
       "Microsoft.AspNetCore.Components.dll": "sha256-I\/fFqtGWHOANqsksW7HD8sGzNiIDfhFBTmkoq7iojw8=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ayazMPuz17Uh6yyOaWTZwxfAFXN4V1Zh\/ma6C\/o9gKo=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-2fbR6RpUxEMnL89Bp4BedWtQJQRpzWAu87gh1UjPAWk=",
@@ -25,15 +25,15 @@
       "System.Collections.Concurrent.dll": "sha256-DEbtVwDE7b0SK2Ids\/SZcjV0sbbkapr+\/xiK4dBhrto=",
       "System.Collections.dll": "sha256-P+PJ4oIdQ7dP0Eiwto4ZCji\/e8kQP9BJvK+dja+81J0=",
       "System.ComponentModel.dll": "sha256-Yt2oJcpvCsQOKO97AQ\/IzcRVhDgp3QbftjrgtCAbE8M=",
-      "System.Console.dll": "sha256-oxSBlN0Fa8Km4XsmEWsl5ricve3xx8SkP9Pp8W0cGKk=",
+      "System.Console.dll": "sha256-B4lMsnNHmOaGGex6Zz04FpHr53bbrMZSQeYE7GZmUaM=",
       "System.Memory.dll": "sha256-L982+5fGeUow34mTmvzhvUrI\/wYidSdqPnLymwx3Cp4=",
       "System.Net.Http.dll": "sha256-WAkmqPJMtyrPbqkw7AVWcDHuI7JaxEi13q3jNYDeweQ=",
       "System.Net.Primitives.dll": "sha256-RN0F232Q70QRSS94o2MsX6\/0vscFfTWHfIiKDuzIspc=",
-      "System.Private.CoreLib.dll": "sha256-s+\/pCE0jFK18Qg03t8VuVtsc1NPebGpXyjZ1AwnkbT4=",
+      "System.Private.CoreLib.dll": "sha256-sZfFtCS70kngUjUHjNy6rY5yvF4hiZVoV6ECjVXLFPc=",
       "System.Private.Runtime.InteropServices.JavaScript.dll": "sha256-HY2+e3GfJejIUbHo8GiN6j8zhN3YQJ\/6pphg7xhGsbc=",
       "System.Private.Uri.dll": "sha256-PbiEtNj1eASjlsJGxh+ZefUwlXKMelqp7Rhhn6R24jU=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-pboIs9f2VIFXqCFHxgzhAkwhq+Vjkbm4tbx1jlqlCAs=",
-      "System.Runtime.dll": "sha256-Si2MUNlR67T5Z5XZM7rR7A+fOyGwxNoehi3fxr8V8Jw=",
+      "System.Runtime.dll": "sha256-5kQrjMCpenEIHRnKcM+SY6HxajkloQxR+xA5QP4XxNY=",
       "System.Text.Encodings.Web.dll": "sha256-2bylgJUiQjpqubbK7zSJaLR20rsotQrg2r0Z9\/Mj7AE=",
       "System.Text.Json.dll": "sha256-dAChizKNtsM9UdPWGH26oySUOaEBzW1fYsPOFbLXXCE="
     },
