@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-ccJpjG2xpK9ggPM2JdP\/pqjZKgbSXC6JyCaJYHzAgyc=",
+      "hash": "sha256-VBDtzi1gbBxejZpqPfZFzHz9derjR83PLYK072WeNsY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-h9eYutNTT9Ekkgextl0QbEg8SpkDtn9jo36yCWSGq\/M=",
+      "hash": "sha256-aZ9A\/LR6ZqKLYNKccayYXFCIItXeLr\/kbW3ohoEjEsU=",
       "url": "_framework\/DVD.dll"
     },
     {
@@ -121,7 +121,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-QFErARHMpCZfDOY\/kxnbX70BJJeHsHjDRZkSEECpQaM=",
+      "hash": "sha256-\/45RLU+BFuyeu0PNZeC3l5GMAV8pgkWSuUogfveE5pg=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -229,5 +229,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "9kN5nw4a"
+  "version": "tgmDxmTC"
 };
