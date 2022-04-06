@@ -1,6 +1,6 @@
 {
-  "name": "DVD",
-  "short_name": "DVD",
+  "name": "GithubPages",
+  "short_name": "GithubPages",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
