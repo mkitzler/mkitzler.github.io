@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubPages", "GithubPages\GithubPages.csproj", "{83B9E121-7800-4FFB-9332-25500033B4B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BouncingDVDLogo", "BouncingDVDLogo\BouncingDVDLogo.csproj", "{45640ECB-8C85-4E78-8DD1-7E1D705541A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83B9E121-7800-4FFB-9332-25500033B4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B9E121-7800-4FFB-9332-25500033B4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B9E121-7800-4FFB-9332-25500033B4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B9E121-7800-4FFB-9332-25500033B4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54D5D74E-70B6-43E9-AABC-8B1A88CACAE3}
+	EndGlobalSection
+EndGlobal
