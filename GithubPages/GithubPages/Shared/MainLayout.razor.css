@@ -2,23 +2,19 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    background-color: #000;
+    height: 100vh;
 }
 
 main {
     flex: 1;
-    left: 25rem;
-    position: relative;
-    margin-left: -25rem;
+    transition: left .5s ease;
+    height: 100%;
 }
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-    transition: .5s ease;
-}
-
-.sidebar:hover {
-    width: 25rem;
+    transition: width .5s ease;
 }
 
 .top-row {
@@ -64,12 +60,26 @@ main {
         flex-direction: row;
     }
 
+    main {
+        left: 0;
+        margin-left: 5rem;
+        position: relative;
+    }
+
     .sidebar {
         width: 5rem;
         height: 100vh;
-        position: sticky;
+        position: absolute;
         top: 0;
     }
+
+        .sidebar:hover ~ main {
+            left: 20rem;
+        }
+
+        .sidebar:hover {
+            width: 25rem;
+        }
 
     .top-row {
         position: sticky;
