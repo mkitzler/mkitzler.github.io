@@ -1,9 +1,52 @@
 ﻿@page "/"
+@inject IJSRuntime JS
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<canvas id="renderCanvas" class="background"></canvas>
 
-Welcome to your new app.
+<div style="position: relative; z-index: 1;">
+    <h1>Hello, world!</h1>
 
-<a href="DVD">DVD</a>
+    Welcome to your new app.
+</div>
+
+@code {
+    private IJSObjectReference? _text;
+    private SemaphoreSlim _textModuleLoaded { get; set; } = new SemaphoreSlim(0, 1);
+
+    protected override void OnParametersSet()
+    {
+        Task.Run(async () =>
+        {
+            _text = await JS.InvokeAsync<IJSObjectReference>("import", "./js/3Dtext.js");
+            _textModuleLoaded.Release();
+        });
+        base.OnParametersSet();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Task.Run(async () =>
+            {
+                await _textModuleLoaded.WaitAsync();
+                _text?.InvokeVoidAsync("Init", "renderCanvas", "Lorem ipsum");
+            });
+        }
+        base.OnAfterRender(firstRender);
+    }
+}
