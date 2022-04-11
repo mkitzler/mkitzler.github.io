@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-ar2cKmfimIAZ+SAwk24\/LPT12MG+1xqcU9L9FVeIoKY=",
+      "hash": "sha256-HL8k9M\/Xwqlxt8qB0VFNhltqlq8mpxT6VJ+V7p5Z8+M=",
       "url": "GithubPages.styles.css"
     },
     {
@@ -65,8 +65,16 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-NPhHgf0xPX7d9UAYZ0fu7Tl0bdhwa5a7d9mEXzHl3a0=",
+      "hash": "sha256-MzZ1ThVe0HY6bn37m2z3Z14fwfXJTgU50MJsUoTVoaU=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-jrS5dg9HyDUhovjojT+P\/yC2GStmr\/VZ4QpZc7Xi81Q=",
+      "url": "js\/3Dtext.js"
+    },
+    {
+      "hash": "sha256-YFV4qig0UlIKxjtXwbxvrv+Um8MzCa9dKrTlCw4RPmI=",
+      "url": "js\/babylon\/meshwriter.min.js"
     },
     {
       "hash": "sha256-o4il6QUMZ+7u89Ki5QO9TJIqGyCO9omkB+LBLjkr\/Z4=",
@@ -105,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-n3M+lxnjUqNeY2GoSUXznjAyXgzliLFA1\/+FpeaMU6Q=",
+      "hash": "sha256-Y5V4LiAJN4Q6GEIgoPmKDDDQjujgq2DYRkBDSmJaMbM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -113,7 +121,7 @@
       "url": "_framework\/BouncingDVDLogo.dll"
     },
     {
-      "hash": "sha256-OekOmgnTSfnEzUnFCgP\/gTxG51MiApwSaL\/UWq\/wajc=",
+      "hash": "sha256-49ebz\/ecwBpOTZLMxDbWfe3V9d0E5wrUPCRM6rOnY08=",
       "url": "_framework\/GithubPages.dll"
     },
     {
@@ -165,7 +173,7 @@
       "url": "_framework\/Microsoft.Extensions.Primitives.dll"
     },
     {
-      "hash": "sha256-VBuqbENmL9wFwo0HpAb0RNW124UfgtOBHG3eJZX1AqA=",
+      "hash": "sha256-wYcYXbL\/f61tyd2a2VE5k4T4yjOjEhEoPs1qequlG28=",
       "url": "_framework\/Microsoft.JSInterop.dll"
     },
     {
@@ -225,6 +233,10 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
+      "hash": "sha256-jsMfp3vjpS1e136WgBEQK03RJElFEjwTiT2zpz97N6g=",
+      "url": "_framework\/System.Threading.dll"
+    },
+    {
       "hash": "sha256-0WvasvndWZXLqsm+FO6kqbaIoMjC6xcfA\/ouU1upA6A=",
       "url": "_content\/BouncingDVDLogo\/BouncingDVDLogo.bundle.scp.css"
     },
@@ -241,5 +253,5 @@
       "url": "_content\/BouncingDVDLogo\/interop.js"
     }
   ],
-  "version": "BNFC+She"
+  "version": "cTG8grmP"
 };

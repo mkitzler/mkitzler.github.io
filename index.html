@@ -12,17 +12,92 @@
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <style>
+        .loading {
+            transform-origin: 50% 50%;
+            animation-name: rotation;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .loading1 {
+            animation-duration: 2.5s;
+        }
+
+        .loading2 {
+            animation-duration: 2s;
+        }
+
+        .loading3 {
+            animation-duration: 1.5s;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(359deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app">Loading...</div>
+    <div id="app">
+        <div style="display: flex; align-content: center; justify-content: center; flex-wrap: wrap; width: 100%; height: 100vh; background-color: #000;">
+            <svg style="width: 100%; height: 8rem; stroke: white; fill: none; stroke-width: 2; margin-bottom: 2rem;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path class="loading loading1" d=" M 50 2 A 48 48 0 0 1 84 16" />
+                <path class="loading loading2" d=" M 50 6 A 44 44 0 0 1 81 19" />
+                <path class="loading loading3" d=" M 50 10 A 40 40 0 0 1 78 22" />
+            </svg>
+            <div>
+                <svg style="height: 3rem;" viewBox="0 0 140 20" xmlns="http://www.w3.org/2000/svg">
+                    <!--<line id="progressbarSVG" class="progress-bar" x1="20" y1="1" x2="20" y2="1" style="stroke: white; fill: none; stroke-width: 2;" />-->
+                    <path d="M 17 0 l 0 5 l 106 0 l 0 -5" style="stroke: white; fill: none; stroke-width: 2;" />
+                </svg>
+                <div style="width: 15rem; margin: -3rem 0 0 3rem">
+                    <div id="progressbar" style="transition: width .5s ease; height: 0.3rem; background-color: white; width: 0"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script>
+        // Thx to https://github.com/dotnet/aspnetcore/issues/25165#issuecomment-781748618
+        var i = 0;
+        var allResourcesBeingLoaded = [];
+        Blazor.start({ // start manually with loadBootResource
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                if (type == "dotnetjs")
+                    return defaultUri;
+
+                var fetchResources = fetch(defaultUri);
+
+                allResourcesBeingLoaded.push(fetchResources);
+                fetchResources.then((r) => {
+                    i++;
+                    var total = allResourcesBeingLoaded.length;
+                    var value = parseInt((i * 100.0) / total);
+
+                    var progressbar = document.getElementById('progressbar');
+                    var pct = value + '%';
+                    progressbar.style.width = pct;
+
+                    //var progressbarSVG = document.getElementById('progressbarSVG');
+                    //progressbarSVG.x2.baseVal.newValueSpecifiedUnits(1, value + 20);
+                });
+                return fetchResources;
+            }
+        });
+    </script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
 

@@ -1,18 +1,31 @@
 @import '_content/BouncingDVDLogo/BouncingDVDLogo.bundle.scp.css';
 
+/* /Pages/Index.razor.rz.scp.css */
+.background[b-i1r4t6byui] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-7jwftghafr] {
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: #000;
+    height: 100vh;
 }
 
 main[b-7jwftghafr] {
     flex: 1;
+    transition: left .5s ease;
+    height: 100%;
 }
 
 .sidebar[b-7jwftghafr] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    transition: width .5s ease;
 }
 
 .top-row[b-7jwftghafr] {
@@ -58,12 +71,26 @@ main[b-7jwftghafr] {
         flex-direction: row;
     }
 
+    main[b-7jwftghafr] {
+        left: 0;
+        margin-left: 5rem;
+        position: relative;
+    }
+
     .sidebar[b-7jwftghafr] {
-        width: 250px;
+        width: 5rem;
         height: 100vh;
-        position: sticky;
+        position: absolute;
         top: 0;
     }
+
+        .sidebar:hover ~ main[b-7jwftghafr] {
+            left: 20rem;
+        }
+
+        .sidebar:hover[b-7jwftghafr] {
+            width: 25rem;
+        }
 
     .top-row[b-7jwftghafr] {
         position: sticky;
@@ -90,17 +117,38 @@ main[b-7jwftghafr] {
 .top-row[b-5nj4qns77c] {
     height: 3.5rem;
     background-color: rgba(0,0,0,0.4);
+    overflow: clip;
 }
 
 .navbar-brand[b-5nj4qns77c] {
     font-size: 1.1rem;
 }
 
+    .navbar-brand[b-5nj4qns77c]::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        width: 2rem;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(255,255,255, 0), rgb(4, 23, 61) 80%);
+    }
+
 .oi[b-5nj4qns77c] {
     width: 2rem;
+    min-width: 2rem;
     font-size: 1.1rem;
     vertical-align: text-top;
     top: -2px;
+}
+
+.oi-svg[b-5nj4qns77c] {
+    width: 2rem;
+    margin-right: 0.5rem;
+    margin-left: -.5rem;
+    filter: invert(100%) sepia(84%) saturate(2%) hue-rotate(179deg) brightness(110%) contrast(101%);
 }
 
 .nav-item[b-5nj4qns77c] {
@@ -123,6 +171,8 @@ main[b-7jwftghafr] {
         display: flex;
         align-items: center;
         line-height: 3rem;
+        white-space: nowrap;
+        overflow: clip;
     }
 
 .nav-item[b-5nj4qns77c]  a.active {
