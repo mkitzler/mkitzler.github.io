@@ -6,6 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup>
+	<RunAOTCompilation>true</RunAOTCompilation>
+  </PropertyGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
