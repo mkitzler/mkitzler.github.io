@@ -23,8 +23,9 @@
 	[Parameter]
 	public string? Style { get; set; }
 
-	private const double maxDeviation = 30;
+	private const double maxDeviation = 20;
 	private const double maxCheatAngle = 10;
+	private const int maxRandomAngle = 7;
 
 	private int colors = 7, currColor = 0;
 	private int Color
@@ -111,7 +112,7 @@
 				to = cornerAngle;
 				justCheated = true;
 				#if DEBUG
-			Console.WriteLine($"Correcting path");
+					Console.WriteLine($"Correcting path");
 				#endif
 			}
 			else
@@ -121,7 +122,7 @@
 		}
 		else
 		{	// ...or add some randomness
-			to += r.Next(-10, 11);
+			to += r.Next(-maxRandomAngle, maxRandomAngle + 1);
 
 			// Keep Angle from getting too extreme
 			if (to < lowerBound + maxDeviation)
