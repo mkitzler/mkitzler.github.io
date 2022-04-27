@@ -65,7 +65,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-MzZ1ThVe0HY6bn37m2z3Z14fwfXJTgU50MJsUoTVoaU=",
+      "hash": "sha256-4WGXyvEgYDuvHQVi5CViXEauO5Q8WEkxzy3qsaMAnyo=",
       "url": "index.html"
     },
     {
@@ -253,5 +253,5 @@
       "url": "_content\/BouncingDVDLogo\/interop.js"
     }
   ],
-  "version": "a+hveJIg"
+  "version": "FITSp6Gj"
 };
