@@ -47,7 +47,7 @@
 <body>
     <div id="app">
         <div style="display: flex; align-content: center; justify-content: center; flex-wrap: wrap; width: 100%; height: 100vh; background-color: #000;">
-            <svg style="width: 100%; height: 8rem; stroke: white; fill: none; stroke-width: 2; margin-bottom: 2rem;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg id="loadingCircle" style="width: 90%; height: 15rem; stroke: white; fill: none; stroke-width: 2; margin-bottom: 2rem; transition: transform 0.1s ease 0s;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path class="loading loading1" d=" M 50 2 A 48 48 0 0 1 84 16" />
                 <path class="loading loading2" d=" M 50 6 A 44 44 0 0 1 81 19" />
                 <path class="loading loading3" d=" M 50 10 A 40 40 0 0 1 78 22" />
@@ -71,6 +71,10 @@
     </div>
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
+        document.onmousemove = (event) => {
+            document.getElementById("loadingCircle").style.transform = "rotate3d(" + ((event.clientY / window.innerHeight - 0.5) * -2) + ", " + ((event.clientX / window.innerWidth) * 2 - 1) + ", 0, 30deg)";
+        }
+
         // Thx to https://github.com/dotnet/aspnetcore/issues/25165#issuecomment-781748618
         var i = 0;
         var allResourcesBeingLoaded = [];
