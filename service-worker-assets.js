@@ -1,11 +1,11 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-HL8k9M\/Xwqlxt8qB0VFNhltqlq8mpxT6VJ+V7p5Z8+M=",
+      "hash": "sha256-7uaRU3WeGpT8yGGEN+sgfURaLHSfTkgwVTLd1GNwdpc=",
       "url": "GithubPages.styles.css"
     },
     {
-      "hash": "sha256-kfXT+\/7PwnK7UBTMq8\/AX20+soj7u1sV\/U1lCtnmSZI=",
+      "hash": "sha256-2vxyfo9NVthwV3XNHioDoPMrV2QTri1BR\/fWJlMUB\/k=",
       "url": "css\/app.css"
     },
     {
@@ -69,7 +69,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-jrS5dg9HyDUhovjojT+P\/yC2GStmr\/VZ4QpZc7Xi81Q=",
+      "hash": "sha256-N\/8NGzARImv7l9aaApANqaEC7BuxyDaRAd5oMgZRLOg=",
       "url": "js\/3Dtext.js"
     },
     {
@@ -105,7 +105,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-11jlcKJvoeofWKSd3wCmhs9uxi1\/3iB1Jd3Xff2a+w4=",
+      "hash": "sha256-Q4JxqGGlpW9FU3IzNwVCFrQgxzB3Ao22uXpYQijwKC4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/BouncingDVDLogo.dll"
     },
     {
-      "hash": "sha256-UFRwz5i7ZroIa3qrPME9jyhZKO1EEGTixrJVqaL8zj0=",
+      "hash": "sha256-+LsEvEPilBDANOz8yBv4fkOZIQ5wlX3mHzKmBlMaXY4=",
       "url": "_framework\/GithubPages.dll"
     },
     {
@@ -185,6 +185,10 @@
       "url": "_framework\/System.ComponentModel.dll"
     },
     {
+      "hash": "sha256-y2uCsEjSay5N3nRH\/40mAPxSAWeSbi6dRGdlK+SNz9A=",
+      "url": "_framework\/System.Console.dll"
+    },
+    {
       "hash": "sha256-EZW63vwTjgLixjZnaXqM7JeiuPB16Ojo8DtlNKRKegE=",
       "url": "_framework\/System.Memory.dll"
     },
@@ -197,7 +201,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-kUmHDEZwx9nhu0ZCPPpWNs\/nF4K1NPRIDXOHmFXzoY4=",
+      "hash": "sha256-Ig1k55MBLDEjMALZD+YzZZHCvZxroTJR0\/cWf5tDhvM=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -229,11 +233,11 @@
       "url": "_framework\/System.Threading.dll"
     },
     {
-      "hash": "sha256-v2gIuQ0P+LIYaALxLrCzETWNLI3QioOU\/RLD6cPiv+Y=",
+      "hash": "sha256-K8E\/7k6kgHLHP1p3+BltOaQi1ogIc0\/qDuzIdQ3dIzs=",
       "url": "_framework\/dotnet.6.0.5.8ka3sxo256.js"
     },
     {
-      "hash": "sha256-WbtIsO9d+UkJFzsRbdkAy\/dsPaGuTBSu8XPZO6GuBoY=",
+      "hash": "sha256-N6mmZ02YT6mrz6PSfX706e9WWThEv+r6Tv\/VC+hpiZo=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -253,5 +257,5 @@
       "url": "_content\/BouncingDVDLogo\/interop.js"
     }
   ],
-  "version": "PKq1YdQU"
+  "version": "VoAVeFHy"
 };

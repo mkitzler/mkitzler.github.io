@@ -2,6 +2,8 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*overwrite bootstrap defaults*/
+    --bs-body-color: #AAA;
 }
 
 h1:focus {
