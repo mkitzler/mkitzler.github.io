@@ -1,0 +1,61 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <article class="content px-4" style="height: 100%; position: relative">
+            <canvas id="renderCanvas" class="background"></canvas>
+
+            <div style="position: relative; z-index: 1;">
+                @Body
+            </div>
+        </article>
+    </main>
+</div>
+
+@code {
+    private IJSObjectReference? _text;
+    private SemaphoreSlim _textModuleLoaded { get; set; } = new SemaphoreSlim(0, 1);
+
+    protected override void OnParametersSet()
+    {
+        Task.Run(async () =>
+        {
+            await JS.InvokeAsync<IJSObjectReference>("import", "https://cdn.babylonjs.com/babylon.js");
+            await JS.InvokeAsync<IJSObjectReference>("import", "./js/babylon/meshwriter.min.js");
+            _text = await JS.InvokeAsync<IJSObjectReference>("import", "./js/3Dtext.js");
+            Console.WriteLine("Loaded text");
+            _textModuleLoaded.Release();
+        });
+        base.OnParametersSet();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Task.Run(async () =>
+            {
+                await _textModuleLoaded.WaitAsync();
+                _text?.InvokeVoidAsync("Init", "renderCanvas", "Lorem ipsum");
+            });
+        }
+        base.OnAfterRender(firstRender);
+    }
+}
