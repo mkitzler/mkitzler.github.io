@@ -72,7 +72,13 @@
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
         document.onmousemove = (event) => {
-            document.getElementById("loadingCircle").style.transform = "rotate3d(" + ((event.clientY / window.innerHeight - 0.5) * -2) + ", " + ((event.clientX / window.innerWidth) * 2 - 1) + ", 0, 30deg)";
+            let loading = document.getElementById("loadingCircle");
+            if (loading !== null) {
+                loading.style.transform = "rotate3d(" + ((event.clientY / window.innerHeight - 0.5) * -2) + ", " + ((event.clientX / window.innerWidth) * 2 - 1) + ", 0, 30deg)";
+            }
+            else {
+                document.onmousedown = null;
+            }
         }
 
         // Thx to https://github.com/dotnet/aspnetcore/issues/25165#issuecomment-781748618
