@@ -1,25 +1,4 @@
-﻿function loadScript(source) {
-    return new Promise((resolve, reject) => {
-        let script = document.createElement("script");
-        script.src = source;
-        script.type = "text/javascript";
-        script.onload = resolve;
-        script.onerror = reject;
-        document.body.appendChild(script);
-    });
-}
-
-function loadScripts(sourceArray) {
-    let loading = [];
-    sourceArray.forEach(x => loading.push(loadScript(x)));
-    return Promise.all(loading);
-}
-
-var ls = loadScripts(["https://cdn.babylonjs.com/babylon.js",
-    "./js/babylon/meshwriter.min.js"]);
-
-export async function Init(canvasId, text) {
-    await ls;
+﻿export async function Init(canvasId, text) {
     // Get the canvas DOM element
     var canvas = document.getElementById(canvasId);
     // Load the 3D engine
