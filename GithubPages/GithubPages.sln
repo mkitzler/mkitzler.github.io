@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubPages", "GithubPages\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BouncingDVDLogo", "BouncingDVDLogo\BouncingDVDLogo.csproj", "{45640ECB-8C85-4E78-8DD1-7E1D705541A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTreeLibrary", "BTreeLibrary\BTreeLibrary.csproj", "{4526C848-85EA-4838-97F7-7F712CCEC697}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45640ECB-8C85-4E78-8DD1-7E1D705541A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4526C848-85EA-4838-97F7-7F712CCEC697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4526C848-85EA-4838-97F7-7F712CCEC697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4526C848-85EA-4838-97F7-7F712CCEC697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4526C848-85EA-4838-97F7-7F712CCEC697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

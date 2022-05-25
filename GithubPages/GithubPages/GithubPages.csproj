@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BouncingDVDLogo\BouncingDVDLogo.csproj" />
+    <ProjectReference Include="..\BTreeLibrary\BTreeLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
