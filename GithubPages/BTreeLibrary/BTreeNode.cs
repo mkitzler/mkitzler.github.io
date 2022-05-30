@@ -30,6 +30,7 @@ namespace BTreeLibrary
             Subnodes = list;
         }
 
+
         public int Depth()
         {
             if (HasSubnodes)
@@ -38,38 +39,52 @@ namespace BTreeLibrary
                 return 0;
         }
 
-
         public List<BTreeNode<T>>? Add(T value)
         {
+            List<BTreeNode<T>>? ret = null;
+
             //Add / Insert
             int addAt = 0;
-            for (; addAt < Subnodes.Count && value.CompareTo(Subnodes[addAt].Value) >= 0; addAt++) {}
-            if (addAt < Subnodes.Count && Subnodes[addAt].HasSubnodes)
-            {
-                List<BTreeNode<T>>? ret = Subnodes[addAt].Add(value);
-                if (ret != null)
+            for (; addAt < Subnodes.Count && value.CompareTo(Subnodes[addAt].Value) > 0; addAt++) {}
+            if (addAt < Subnodes.Count && Subnodes[addAt].HasSubnodes)  // If within List and append to subnode available
+            {   // Add as subnode
+                List<BTreeNode<T>>? res = Subnodes[addAt].Add(value);
+                if (res != null)
                 {
-                    Subnodes.Insert(addAt, new BTreeNode<T>(_maxSize, ret));
+                    if (Subnodes.Count + 1 > _maxSize)
+                    {
+                        ret = Split();
+                        Add(value);
+                    }
+                    else
+                        Subnodes.Insert(addAt, new BTreeNode<T>(_maxSize, res));
                 }
             }
             else
-            {
-                Subnodes.Insert(addAt, new BTreeNode<T>(_maxSize, value));
+            {   // Create new node
+                if (Subnodes.Count + 1 > _maxSize)
+                {
+                    ret = Split();
+                    Add(value);
+                }
+                else
+                    Subnodes.Insert(addAt, new BTreeNode<T>(_maxSize, value));
+                //if (HasSubnodes)    //TODO
+                //{
+                //    node.Add(value);
+                //}
             }
 
-            // Split
-            if (Subnodes.Count > _maxSize)
-            {
-                int firstHalfCount = (int)Math.Floor(Subnodes.Count / 2d);
-                List<BTreeNode<T>>? ret = Subnodes.GetRange(0, firstHalfCount);
-                Subnodes.RemoveRange(0, firstHalfCount);
-                Value = Subnodes.Last().Value;
-                return ret;
-            }
-            else
-            {
-                return null;
-            }
+            return ret;
+        }
+
+        private List<BTreeNode<T>> Split()
+        {
+            int firstHalfCount = (int)Math.Floor(Subnodes.Count / 2d);
+            List<BTreeNode<T>> ret = Subnodes.GetRange(0, firstHalfCount);
+            Subnodes.RemoveRange(0, firstHalfCount);
+            Value = Subnodes.Last().Value;
+            return ret;
         }
 
         public int ToList(List<List<T[]>> valueCounts)
@@ -92,9 +107,30 @@ namespace BTreeLibrary
             return level + 1;
         }
 
-        public void ForEach(Action<BTreeNode<T>, int> action, int level)
+        public double ForEach(BTree<T>.forEachDelegate action, int level, ref int bottomCount)
         {
-            Subnodes.ForEach(x => x.ForEach(action, 0));
+            double x = 0;
+            if (HasSubnodes)
+            {
+                double x1 = Subnodes[0].ForEach(action, level + 1, ref bottomCount);
+                for (int i = 1; i < Subnodes.Count - 1; i++)
+                {
+                    Subnodes[i].ForEach(action, level + 1, ref bottomCount);
+                }
+                double x2 = Subnodes[Subnodes.Count - 1].ForEach(action, level + 1, ref bottomCount);
+                x = (x1 + x2) / 2;
+            }
+            else
+            {
+                x = bottomCount++;
+            }
+            action(this, x, level);
+            return x;
+        }
+
+        public override string ToString()
+        {
+            return Value.ToString()!;
         }
     }
 }

@@ -1,33 +1,54 @@
-﻿<input type="text" value=@toVisualize/>
-<label>Word length: <input type="number" value=@wordLength min=3/></label>
-<button @onclick=Visualize>Generate</button>
-<svg width="100%" height="90%" viewBox="-100 0 200 200" xmlns="http://www.w3.org/2000/svg" style="background-color: #222;">
-    <rect x="-5" y="5" width="20" height="20" fill="white" stroke-width="2" stroke="black" />
-    <text x="-5" y="15" font-family="Verdana" font-size="35">B</text>
+﻿<div style="margin-bottom: 1rem;">
+    <input type="text" class="form-control" @bind=toVisualize style="width: 40%; display: inline;"/>
+    <label>Word length: <input type="number" class="form-control" @bind=wordLength min=3/></label>
+    <button class="btn btn-primary" @onclick=Visualize>Generate</button>
+</div>
+<svg width="100%" height="90%" viewBox="70 0 500 500" xmlns="http://www.w3.org/2000/svg" style="background-color: #222;">
+    @*<rect x="0" y="5" width="20" height="20" fill="white" stroke-width="1" stroke="black" />
+    <text x="3" y="23" font-family="Verdana" font-size="20">B</text>*@
+    @tree
 </svg>
 
 @code {
     private string toVisualize = "";
-    private int wordLength = 5;
+    private int wordLength = 4;
+    private RenderFragment? tree = null;
 
     private void Visualize()
     {
         BTree<char> bTree = new BTree<char>(wordLength);
-        foreach (char c in toVisualize)
+        Console.WriteLine(toVisualize);
+        foreach (char c in toVisualize.ToUpper())
         {
             bTree.Add(c);
-        }
 
-        List<List<char[]>> tree = bTree.ToList();
-
-        for (var i = 0; i < tree.Count; i++)
-        {
-            for (var j = 0; j < tree[i].Count; j++)
+            tree = __builder =>
             {
-                tree[i][j]
-            }
+                int seq = 0;
+                bTree.ForEach((node, x, y) =>
+                {
+                    __builder.AddContent(seq++, (MarkupString)$"<rect x=\"{20 * x}\" y=\"{5 + 35 * y}\" width=\"20\" height=\"20\" fill=\"white\" stroke-width=\"1\" stroke=\"black\" />");
+                    __builder.AddContent(seq++, (MarkupString)$"<text x=\"{10 + 20 * x}\" y=\"{23 + 35 * y}\" font-family=\"Verdana\" font-size=\"20\" text-anchor=\"middle\">{node.Value}</text>");
+                });
+            };
+
+            StateHasChanged();
         }
-        //sb.Append("<rect x=\" - 5\" y=\"5\" width=\"20\" height=\"20\" fill=\"white\" stroke-width=\"2\" stroke=\"black\" />");
-        //sb.Append("<text x=\" - 5\" y=\"15\" font-family=\"Verdana\" font-size=\"35\">B</text>");
+
+        //Console.WriteLine(bTree.Depth());
+
+        //bTree.ForEach((node, x, y) => Console.WriteLine(node.Value));
+
+        //tree = __builder =>
+        //{
+        //    int seq = 0;
+        //    bTree.ForEach((node, x, y) =>
+        //    {
+        //        __builder.AddContent(seq++, (MarkupString)$"<rect x=\"{20 * x}\" y=\"{5 + 35 * y}\" width=\"20\" height=\"20\" fill=\"white\" stroke-width=\"1\" stroke=\"black\" />");
+        //        __builder.AddContent(seq++, (MarkupString)$"<text x=\"{3 + 20 * x}\" y=\"{23 + 35 * y}\" font-family=\"Verdana\" font-size=\"20\">{node.Value}</text>");
+        //    });
+        //};
+
+        //StateHasChanged();
     }
 }
