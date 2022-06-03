@@ -100,7 +100,7 @@
 		};
 		cornerAngle = dvdPos.AngleTo(corner) / Math.PI * 180;
 		#if DEBUG
-			Console.WriteLine($"Predicted: {cornerAngle}, Angle: {to}");
+			Console.WriteLine($"Predicted: {cornerAngle}, Angle: {to}, Cheatable: {Math.Abs(to - cornerAngle) < maxCheatAngle}");
 		#endif
 
 		// snap to corner...
@@ -108,7 +108,7 @@
 		{
 			to = cornerAngle;
 			#if DEBUG
-				Console.WriteLine($"Correcting path");
+				Console.WriteLine($"Cheating");
 			#endif
 		}
 		else
