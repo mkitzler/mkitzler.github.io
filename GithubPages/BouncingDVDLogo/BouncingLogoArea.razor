@@ -43,7 +43,6 @@
 
 	private Random r = new();
 	private double cornerAngle = 0;
-	private bool justCheated = false;
 
 	private Dimensions? dvd, window;
 	private Position dvdPos = new(100, 100);
@@ -105,20 +104,12 @@
 		#endif
 
 		// snap to corner...
-		if (Math.Abs(to - cornerAngle) < maxCheatAngle)
+		if (Math.Abs(to - cornerAngle) < maxCheatAngle && r.Next(0, 100) <= 30)
 		{
-			if (!justCheated)
-			{
-				to = cornerAngle;
-				justCheated = true;
-				#if DEBUG
-					Console.WriteLine($"Correcting path");
-				#endif
-			}
-			else
-			{
-				justCheated = false;
-			}
+			to = cornerAngle;
+			#if DEBUG
+				Console.WriteLine($"Correcting path");
+			#endif
 		}
 		else
 		{	// ...or add some randomness
