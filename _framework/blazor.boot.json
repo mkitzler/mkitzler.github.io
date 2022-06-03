@@ -7,9 +7,9 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BouncingDVDLogo.dll": "sha256-3Vdh2MpoA\/hU+7ErkZXxruGM0pSTeBFhlL5i0x+uR6A=",
+      "BouncingDVDLogo.dll": "sha256-\/aNcfeY4dnDcubCotNWz+KqCVyIS+UTUDnowQawm9+k=",
       "BTreeLibrary.dll": "sha256-XDhFM1fqksX5rgPTG5Hvy1GIUbEghqmRUAkDkMy35Fg=",
-      "GithubPages.dll": "sha256-R+QTl1zz7Rc9NJU08tvHuS7yyO\/lKuhbczkwfGn1I1g=",
+      "GithubPages.dll": "sha256-uH8gpStlL528W4rvLAtI9\/qdlrw\/+x1Uatk3K4Gh1js=",
       "Microsoft.AspNetCore.Components.dll": "sha256-knuB5rGwCju83cdKx\/hJcY+y1nyWMt0XclQD4KVeYYM=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-swhllcB8+ISyD3Ea\/Bqq5pPKpxnXh369OZQx5xow18s=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-yUU\/mWWa82QWVsGQj6w\/j4ja+GJcNtYn9qS4hbsDCPU=",
@@ -46,9 +46,9 @@
     "libraryInitializers": null,
     "pdb": null,
     "runtime": {
-      "dotnet.6.0.5.8ka3sxo256.js": "sha256-EpzvAw7MMWVsIpGYRhk46vLbenaqYhA2NpD+9N3rNwg=",
+      "dotnet.6.0.5.8ka3sxo256.js": "sha256-pJ1oxs5Vg8H2w6kLPdm9DTFn9dh1+0qEu02ZHfNNUqE=",
       "dotnet.timezones.blat": "sha256-vRU6+wGzQ3FJ0JtyPJtipblPe9MvJf+qKY20xZhuyKQ=",
-      "dotnet.wasm": "sha256-XriFKbLNTMrXhz6B4vaKfWtNjkPKzTFUnR3k5I3HFI8=",
+      "dotnet.wasm": "sha256-crZ2cl6N7iq7fCzdffJB9xl32ekPRwADm7f9WautG+o=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie\/ro3\/QzyS+\/gGmO3Y\/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA=",

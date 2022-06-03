@@ -105,11 +105,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-0l28hjvy4iOhieg4S1azxooOVAQ4ok5AqQXaGeR9l+o=",
+      "hash": "sha256-Qs6sV8Bnn3B\/1kKcIKg8ES8axYU1\/+lIgldNua9lhp8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-3Vdh2MpoA\/hU+7ErkZXxruGM0pSTeBFhlL5i0x+uR6A=",
+      "hash": "sha256-\/aNcfeY4dnDcubCotNWz+KqCVyIS+UTUDnowQawm9+k=",
       "url": "_framework\/BouncingDVDLogo.dll"
     },
     {
@@ -117,7 +117,7 @@
       "url": "_framework\/BTreeLibrary.dll"
     },
     {
-      "hash": "sha256-R+QTl1zz7Rc9NJU08tvHuS7yyO\/lKuhbczkwfGn1I1g=",
+      "hash": "sha256-uH8gpStlL528W4rvLAtI9\/qdlrw\/+x1Uatk3K4Gh1js=",
       "url": "_framework\/GithubPages.dll"
     },
     {
@@ -241,11 +241,11 @@
       "url": "_framework\/System.Threading.dll"
     },
     {
-      "hash": "sha256-EpzvAw7MMWVsIpGYRhk46vLbenaqYhA2NpD+9N3rNwg=",
+      "hash": "sha256-pJ1oxs5Vg8H2w6kLPdm9DTFn9dh1+0qEu02ZHfNNUqE=",
       "url": "_framework\/dotnet.6.0.5.8ka3sxo256.js"
     },
     {
-      "hash": "sha256-XriFKbLNTMrXhz6B4vaKfWtNjkPKzTFUnR3k5I3HFI8=",
+      "hash": "sha256-crZ2cl6N7iq7fCzdffJB9xl32ekPRwADm7f9WautG+o=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_content\/BTreeLibrary\/exampleJsInterop.js"
     }
   ],
-  "version": "DVq6Ovv9"
+  "version": "xjDG3qb9"
 };
