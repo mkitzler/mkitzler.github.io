@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BouncingDVDLogo.dll": "sha256-\/aNcfeY4dnDcubCotNWz+KqCVyIS+UTUDnowQawm9+k=",
+      "BouncingDVDLogo.dll": "sha256-k6eVfDJd2uLVSSOlxqkBT0LytDIeXak8ftTFmc8ypMg=",
       "BTreeLibrary.dll": "sha256-XDhFM1fqksX5rgPTG5Hvy1GIUbEghqmRUAkDkMy35Fg=",
       "GithubPages.dll": "sha256-uH8gpStlL528W4rvLAtI9\/qdlrw\/+x1Uatk3K4Gh1js=",
       "Microsoft.AspNetCore.Components.dll": "sha256-knuB5rGwCju83cdKx\/hJcY+y1nyWMt0XclQD4KVeYYM=",
@@ -48,7 +48,7 @@
     "runtime": {
       "dotnet.6.0.5.8ka3sxo256.js": "sha256-pJ1oxs5Vg8H2w6kLPdm9DTFn9dh1+0qEu02ZHfNNUqE=",
       "dotnet.timezones.blat": "sha256-vRU6+wGzQ3FJ0JtyPJtipblPe9MvJf+qKY20xZhuyKQ=",
-      "dotnet.wasm": "sha256-crZ2cl6N7iq7fCzdffJB9xl32ekPRwADm7f9WautG+o=",
+      "dotnet.wasm": "sha256-lXS2dVpRtmTVrtTyNhvmk9h3uO8hIY0+NRS4RgbAsZI=",
       "icudt_CJK.dat": "sha256-WPyI4hWDPnOw62Nr27FkzGjdbucZnQD+Ph+GOPhAedw=",
       "icudt_EFIGS.dat": "sha256-4RwaPx87Z4dvn77ie\/ro3\/QzyS+\/gGmO3Y\/0CSAXw4k=",
       "icudt_no_CJK.dat": "sha256-OxylFgLJlFqixsj+nLxYVsv5iZLvfIKMpLf9hrWaChA=",

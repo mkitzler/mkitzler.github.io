@@ -105,11 +105,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Qs6sV8Bnn3B\/1kKcIKg8ES8axYU1\/+lIgldNua9lhp8=",
+      "hash": "sha256-7NdKH1jc1NesLMLJemECzkk5L\/oQiNwY5p+yqzFBCbQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-\/aNcfeY4dnDcubCotNWz+KqCVyIS+UTUDnowQawm9+k=",
+      "hash": "sha256-k6eVfDJd2uLVSSOlxqkBT0LytDIeXak8ftTFmc8ypMg=",
       "url": "_framework\/BouncingDVDLogo.dll"
     },
     {
@@ -245,7 +245,7 @@
       "url": "_framework\/dotnet.6.0.5.8ka3sxo256.js"
     },
     {
-      "hash": "sha256-crZ2cl6N7iq7fCzdffJB9xl32ekPRwADm7f9WautG+o=",
+      "hash": "sha256-lXS2dVpRtmTVrtTyNhvmk9h3uO8hIY0+NRS4RgbAsZI=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_content\/BTreeLibrary\/exampleJsInterop.js"
     }
   ],
-  "version": "xjDG3qb9"
+  "version": "YqUMfSzA"
 };
